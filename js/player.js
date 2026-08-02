@@ -36,7 +36,11 @@
 
   btn.addEventListener("click", function () {
     const songs = typeof SONGS !== "undefined" ? SONGS : [];
+
     if (songs.length === 0) {
+      isPlaying = !isPlaying;
+      btn.classList.toggle("is-playing", isPlaying);
+      btn.setAttribute("aria-pressed", String(isPlaying));
       return;
     }
 

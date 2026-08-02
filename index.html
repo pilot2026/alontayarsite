@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>אלון תייר</title>
+  <style>
+    @font-face {
+      font-family: 'Nitzotz';
+      src: url('Nitzotz-Normal.woff2') format('woff2'),
+           url('Nitzotz-Normal.woff') format('woff'),
+           url('Nitzotz-Normal.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
   <link rel="icon" type="image/svg+xml" href="images/album-placeholder.svg" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -27,8 +38,8 @@
     </div>
     <nav class="mainnav">
       <button id="radio-toggle" class="radio-btn" aria-label="נגן רדיו" aria-pressed="false">
-        <img src="images/music.svg" alt="מוזיקה" class="radio-icon icon-idle" />
-        <img src="images/music.svg" alt="מוזיקה" class="radio-icon icon-playing" />
+        <img src="images/musicoff.svg" alt="מוזיקה כבויה" class="radio-icon icon-idle" />
+        <img src="images/musicon.svg" alt="מוזיקה דלוקה" class="radio-icon icon-playing" />
       </button>
       <a href="music.html" class="nav-link">מוזיקה</a>
     </nav>
