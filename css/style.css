@@ -58,12 +58,22 @@ a {
   fill: var(--fg);
 }
 
-.topbar-name {
-  font-size: 1.3rem;
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  margin: 0 auto;
-  padding: 0 1rem;
+.topbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.topbar-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar-brand img {
+  width: clamp(140px, 18vw, 220px);
+  height: auto;
+  display: block;
 }
 
 .mainnav {
@@ -84,8 +94,8 @@ a {
 }
 
 .radio-btn {
-  background: var(--bg);
-  border: 2px solid var(--fg);
+  background: transparent;
+  border: none;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -94,8 +104,7 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .radio-btn:hover {
@@ -150,11 +159,12 @@ a {
 
 .album-title {
   display: block;
-  width: min(95vw, 900px);
+  width: min(100vw, 1200px);
+  max-width: 100%;
   height: auto;
   margin: 0 0 0.25rem;
-  border: 3px solid var(--fg);
-  padding: 0.2rem 0.5rem;
+  border: none;
+  padding: 0;
 }
 
 .album-art {
@@ -169,10 +179,22 @@ a {
 }
 
 .listen-link {
+  display: block;
+  width: min(100vw, 1200px);
+  max-width: 100%;
+  padding: 0.9rem 1.25rem;
   font-size: 1.1rem;
   font-weight: bold;
-  border-bottom: 2px solid var(--fg);
-  padding-bottom: 2px;
+  text-align: center;
+  background: var(--fg);
+  color: var(--bg);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.listen-link:hover {
+  background: var(--bg);
+  color: var(--fg);
+  transform: scaleX(-1);
 }
 
 /* ===== Music grid page ===== */
@@ -190,10 +212,9 @@ a {
 
 .albums-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
-  justify-content: center;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
   gap: 2rem;
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -213,6 +234,11 @@ a {
 .album-tile-title {
   font-weight: bold;
   font-size: 1rem;
+}
+
+.album-listen-link {
+  width: 100%;
+  max-width: none;
 }
 
 /* ===== Mobile ===== */

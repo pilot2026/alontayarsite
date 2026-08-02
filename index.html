@@ -20,7 +20,11 @@
         <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.4" fill="currentColor"/></svg>
       </a>
     </div>
-    <div class="topbar-name" aria-label="אלון תייר">אלון תייר</div>
+    <div class="topbar-center">
+      <a class="topbar-brand" href="index.html" aria-label="אלון תייר">
+        <img src="images/alontayarlogo.svg" alt="אלון תייר" />
+      </a>
+    </div>
     <nav class="mainnav">
       <button id="radio-toggle" class="radio-btn" aria-label="נגן רדיו" aria-pressed="false">
         <img src="images/music.svg" alt="מוזיקה" class="radio-icon icon-idle" />
@@ -40,7 +44,7 @@
 
   <script src="js/albums.js"></script>
   <script>
-    const latest = ALBUMS[ALBUMS.length - 1];
+    const latest = ALBUMS[0];
     document.getElementById("album-cover").src = latest.cover;
     document.getElementById("album-cover").alt = latest.title + " - עטיפת אלבום";
     document.getElementById("album-link").href = latest.link;

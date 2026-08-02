@@ -7,4 +7,19 @@ const ALBUMS = [
     cover: "images/album-placeholder.svg",
     link: "https://lnk.to/PLACEHOLDER", // TODO: להחליף בקישור האמיתי כשהאלבום יוצא
   },
+  {
+    title: "טוב",
+    cover: "images/album-placeholder.svg",
+    link: "https://lnk.to/PLACEHOLDER",
+  },
+  {
+    title: "מדי פעם אי. פי.",
+    cover: "images/album-placeholder.svg",
+    link: "https://lnk.to/PLACEHOLDER",
+  },
+  {
+    title: "אלון תייר",
+    cover: "images/album-placeholder.svg",
+    link: "https://lnk.to/PLACEHOLDER",
+  },
 ];
