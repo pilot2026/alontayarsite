@@ -30,11 +30,13 @@
   </header>
 
   <main class="hero">
-    <h1 class="logo">אלון תייר</h1>
+    <h1 class="logo" aria-label="אלון תייר">
+      <img src="images/alontayarlogo.svg" alt="אלון תייר" />
+    </h1>
     <a id="album-link" href="#" target="_blank" rel="noopener">
       <img id="album-cover" class="album-art" src="images/album-placeholder.svg" alt="עם כל הלב - עטיפת אלבום" />
     </a>
-    <h2 id="album-title" class="album-title">עם כל הלב</h2>
+    <img id="album-title" class="album-title" src="images/albumlogo.svg" alt="עם כל הלב" />
     <a id="album-listen" class="listen-link" href="#" target="_blank" rel="noopener">להאזנה</a>
   </main>
 
@@ -43,7 +45,6 @@
     const latest = ALBUMS[ALBUMS.length - 1];
     document.getElementById("album-cover").src = latest.cover;
     document.getElementById("album-cover").alt = latest.title + " - עטיפת אלבום";
-    document.getElementById("album-title").textContent = latest.title;
     document.getElementById("album-link").href = latest.link;
     document.getElementById("album-listen").href = latest.link;
   </script>

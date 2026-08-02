@@ -128,8 +128,15 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: clamp(2rem, 6vw, 3.5rem);
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   letter-spacing: 0.02em;
+}
+
+.logo img,
+.album-title {
+  display: block;
+  width: min(80vw, 360px);
+  height: auto;
 }
 
 .album-art {
@@ -140,9 +147,7 @@ a {
 }
 
 .album-title {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: bold;
-  margin: 0.5rem 0 0;
+  margin: 0;
 }
 
 .listen-link {
