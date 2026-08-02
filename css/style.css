@@ -56,6 +56,14 @@ a {
   fill: var(--fg);
 }
 
+.topbar-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .mainnav {
   display: flex;
   align-items: center;
@@ -74,21 +82,27 @@ a {
 }
 
 .radio-btn {
-  background: none;
+  background: var(--bg);
   border: 2px solid var(--fg);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.radio-btn:hover {
+  transform: scale(1.04);
 }
 
 .radio-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   fill: var(--fg);
 }
 
@@ -132,11 +146,11 @@ a {
   letter-spacing: 0.02em;
 }
 
-.logo img,
 .album-title {
   display: block;
   width: min(80vw, 360px);
   height: auto;
+  margin: 0 0 0.25rem;
 }
 
 .album-art {
