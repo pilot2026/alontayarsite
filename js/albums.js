@@ -9,17 +9,17 @@ const ALBUMS = [
   },
   {
     title: "טוב",
-    cover: "images/album-placeholder.svg",
+    cover: "images/album3.jpg",
     link: "https://lnk.to/PLACEHOLDER",
   },
   {
     title: "מדי פעם אי. פי.",
-    cover: "images/album-placeholder.svg",
+    cover: "images/album2.jpg",
     link: "https://lnk.to/PLACEHOLDER",
   },
   {
     title: "אלון תייר",
-    cover: "images/album-placeholder.svg",
+    cover: "images/album1.jpg",
     link: "https://lnk.to/PLACEHOLDER",
   },
 ];
