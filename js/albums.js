@@ -5,21 +5,21 @@ const ALBUMS = [
   {
     title: "עם כל הלב",
     cover: "images/album-placeholder.svg",
-    link: "https://lnk.to/PLACEHOLDER", // TODO: להחליף בקישור האמיתי כשהאלבום יוצא
+    link: "https://lnk.to/alontayar",
   },
   {
     title: "טוב",
     cover: "images/album3.jpg",
-    link: "https://lnk.to/PLACEHOLDER",
+    link: "https://nanadisc.lnk.to/Tov",
   },
   {
     title: "מדי פעם אי. פי.",
     cover: "images/album2.jpg",
-    link: "https://lnk.to/PLACEHOLDER",
+    link: "https://www.youtube.com/watch?v=gdgoJ4rdyhU",
   },
   {
     title: "אלון תייר",
     cover: "images/album1.jpg",
-    link: "https://lnk.to/PLACEHOLDER",
+    link: "https://lnk.to/alontayar",
   },
 ];
