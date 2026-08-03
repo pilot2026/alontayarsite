@@ -4,7 +4,7 @@
 const ALBUMS = [
   {
     title: "עם כל הלב",
-    cover: "images/album-placeholder.svg",
+    cover: "images/albumtemptush.jpg",
     link: "https://lnk.to/alontayar",
   },
   {
