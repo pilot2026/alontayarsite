@@ -2,6 +2,7 @@
   --bg: #f4e84d;
   --fg: #000000;
   --hero-width: min(62vw, 390px);
+  --hero-art-width: var(--hero-width);
   --music-button-width: min(62vw, 390px);
 }
 
@@ -172,8 +173,8 @@ a {
 }
 
 .album-art {
-  width: var(--hero-width);
-  height: var(--hero-width);
+  width: var(--hero-art-width);
+  height: var(--hero-art-width);
   display: block;
   border: 2px solid var(--fg);
   margin-bottom: 0.1rem;
@@ -187,7 +188,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--hero-width);
+  width: var(--hero-art-width);
   max-width: 100%;
   padding: 0.15rem 0.75rem 0.18rem;
   margin-top: 0.01rem;
