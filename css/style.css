@@ -1,6 +1,7 @@
 :root {
   --bg: #f4e84d;
   --fg: #000000;
+  --hero-width: min(60vw, 380px);
 }
 
 * {
@@ -170,8 +171,8 @@ a {
 }
 
 .album-art {
-  width: min(60vw, 380px);
-  height: min(60vw, 380px);
+  width: var(--hero-width);
+  height: var(--hero-width);
   display: block;
   border: 2px solid var(--fg);
   margin-bottom: 0.2rem;
@@ -185,9 +186,9 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: min(60vw, 380px);
+  width: var(--hero-width);
   max-width: 100%;
-  padding: 0.05rem 0.75rem 0.2rem;
+  padding: 0.18rem 0.75rem 0.22rem;
   margin-top: 0.03rem;
   font-size: 1rem;
   font-weight: bold;
@@ -195,8 +196,8 @@ a {
   color: var(--fg);
   background: transparent;
   border: 2px solid var(--fg);
-  line-height: 1;
-  min-height: 1.8rem;
+  line-height: 1.05;
+  min-height: 2rem;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
   box-sizing: border-box;
 }
@@ -249,16 +250,18 @@ a {
 }
 
 .album-listen-link {
-  width: min(60vw, 380px);
+  width: var(--hero-width);
   max-width: 100%;
   margin-top: 0;
 }
 
 .footer-copy {
-  margin: 0.25rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.3;
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
   font-family: 'Nitzotz', Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
 /* ===== Mobile ===== */
