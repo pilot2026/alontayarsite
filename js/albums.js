@@ -4,21 +4,25 @@
 const ALBUMS = [
   {
     title: "עם כל הלב",
+    title_en: "WITH ALL OF MY HEART",
     cover: "images/AT-CoverArt4000X4000.jpg?v=3",
     link: "https://lnk.to/alontayar",
   },
   {
     title: "טוב",
+    title_en: "GOOD",
     cover: "images/album3.jpg",
     link: "https://nanadisc.lnk.to/Tov",
   },
   {
     title: "מדי פעם אי. פי.",
+    title_en: "ONCE IN A WHILE EP",
     cover: "images/album2.jpg",
     link: "https://www.youtube.com/watch?v=gdgoJ4rdyhU",
   },
   {
     title: "אלון תייר",
+    title_en: "ALON TAYAR",
     cover: "images/album1.jpg",
     link: "https://lnk.to/alontayar",
   },

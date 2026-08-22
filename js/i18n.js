@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const setLang = (lang) => {
     localStorage.setItem('lang', lang);
     applyLang(lang);
-    updateToggle(lang);
+    updateSwitch(lang);
+    // notify others
+    document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang } }));
   };
 
   const applyLang = (lang) => {
@@ -28,18 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (strings[lang] && strings[lang][key]) el.textContent = strings[lang][key];
     });
-    // update album listen href remains same; album title is static element
   };
 
-  const updateToggle = (lang) => {
-    document.querySelectorAll('#lang-toggle').forEach((btn) => {
-      btn.textContent = (lang === 'he') ? 'EN' : 'HEB';
+  const updateSwitch = (lang) => {
+    document.querySelectorAll('.lang-switch button').forEach((btn) => {
+      const bLang = btn.getAttribute('data-lang');
+      if (bLang === lang) btn.classList.add('selected'); else btn.classList.remove('selected');
     });
   };
 
-  document.querySelectorAll('#lang-toggle').forEach((btn) => {
+  document.querySelectorAll('.lang-switch button').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const lang = getLang() === 'he' ? 'en' : 'he';
+      const lang = btn.getAttribute('data-lang');
       setLang(lang);
     });
   });
@@ -47,5 +49,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // initialize
   const lang = getLang();
   applyLang(lang);
-  updateToggle(lang);
+  updateSwitch(lang);
 });

@@ -32,12 +32,16 @@
         <img src="images/musicon.svg" alt="מוזיקה דלוקה" class="radio-icon icon-playing" />
       </button>
       <a href="music.html" class="nav-link" data-i18n="music">מוזיקה</a>
-      <button id="lang-toggle" class="lang-toggle" aria-label="שפת אתר">EN</button>
+      <div class="lang-switch">
+        <button data-lang="en">EN</button>
+        <button data-lang="he" class="selected">HEB</button>
+      </div>
     </nav>
   </header>
 
   <main class="music-page">
     <div id="albums-grid" class="albums-grid"></div>
+    <div class="sort-label" data-i18n="sortLabel">מהחדש לישן</div>
     <p class="footer-copy" data-i18n="copyright">© כל הזכויות שמורות לאלון תייר 2026</p>
   </main>
 
@@ -45,32 +49,41 @@
   <script src="js/i18n.js"></script>
   <script>
     const grid = document.getElementById("albums-grid");
-    const albumsToShow = (ALBUMS.length ? ALBUMS : [{ title: "עם כל הלב", cover: "images/AT-CoverArt4000X4000.jpg?v=3", link: "#" }]).slice(0, 4);
+    const albumsToShow = (ALBUMS.length ? ALBUMS : [{ title: "עם כל הלב", title_en: "WITH ALL OF MY HEART", cover: "images/AT-CoverArt4000X4000.jpg?v=3", link: "#" }]).slice(0, 4);
 
-    albumsToShow.forEach((album) => {
-      const tile = document.createElement("div");
-      tile.className = "album-tile";
+    const renderAlbums = (lang) => {
+      grid.innerHTML = '';
+      albumsToShow.forEach((album) => {
+        const tile = document.createElement("div");
+        tile.className = "album-tile";
 
-      const img = document.createElement("img");
-      img.src = album.cover;
-      img.alt = album.title + " - עטיפת אלבום";
+        const img = document.createElement("img");
+        img.src = album.cover;
+        img.alt = (lang === 'en' && album.title_en) ? album.title_en + " - cover" : album.title + " - עטיפת אלבום";
 
-      const title = document.createElement("span");
-      title.className = "album-tile-title";
-      title.textContent = album.title;
+        const title = document.createElement("span");
+        title.className = "album-tile-title";
+        title.textContent = (lang === 'en' && album.title_en) ? album.title_en : album.title;
 
-      const link = document.createElement("a");
-      link.className = "listen-link album-listen-link";
-      link.href = album.link;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = "להאזנה";
+        const link = document.createElement("a");
+        link.className = "listen-link album-listen-link";
+        link.href = album.link;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = (lang === 'en') ? 'LISTEN' : 'להאזנה';
 
-      tile.appendChild(img);
-      tile.appendChild(title);
-      tile.appendChild(link);
-      grid.appendChild(tile);
-    });
+        tile.appendChild(img);
+        tile.appendChild(title);
+        tile.appendChild(link);
+        grid.appendChild(tile);
+      });
+    };
+
+    // initial render and re-render on language change
+    document.addEventListener('languagechange', (e) => renderAlbums(e.detail.lang));
+    // determine current language from localStorage via i18n
+    const currentLang = localStorage.getItem('lang') || 'he';
+    renderAlbums(currentLang);
   </script>
   <script src="js/playlist.js"></script>
   <script src="js/player.js"></script>
