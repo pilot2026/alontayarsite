@@ -4,15 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
       brand: 'אלון תייר',
       music: 'מוזיקה',
       albumTitle: 'עם כל הלב',
-      listen: 'להאזנה',
-      copyright: '© כל הזכויות שמורות לאלון תייר 2026'
+      listen: 'להאזנה'
     },
     en: {
       brand: 'ALON TAYAR',
       music: 'MUSIC',
       albumTitle: 'WITH ALL OF MY HEART',
-      listen: 'LISTEN',
-      copyright: '© Alon Tayar 2026'
+      listen: 'LISTEN'
     }
   };
 
@@ -30,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (strings[lang] && strings[lang][key]) el.textContent = strings[lang][key];
     });
+    // Update footer name if present
+    const footerName = document.querySelector('.footer-name');
+    if (footerName && strings[lang] && strings[lang].brand) footerName.textContent = strings[lang].brand;
   };
 
   const updateSwitch = (lang) => {

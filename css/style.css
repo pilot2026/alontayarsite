@@ -13,7 +13,7 @@
   --hero-art-width: var(--hero-width);
   --music-button-width: min(62vw, 390px);
   /* reduced by ~30% globally */
-  --headline-size: clamp(1.225rem, 3.5vw, 2.45rem);
+  --headline-size: clamp(0.95rem, 2.6vw, 1.9rem);
 }
 
 * {
@@ -101,17 +101,22 @@ a {
 
 .lang-switch {
   display: inline-flex;
-  gap: 0.25rem;
+  gap: 0;
   align-items: center;
 }
 .lang-switch button {
   background: none;
   border: none;
-  padding: 0 0.25rem;
+  padding: 0;
+  margin: 0;
   color: inherit;
   font-family: inherit;
   font-size: var(--headline-size);
   cursor: pointer;
+}
+.lang-switch .lang-sep {
+  padding: 0 0.12rem;
+  line-height: 1;
 }
 .lang-switch button.selected {
   text-decoration: underline;
