@@ -4,8 +4,8 @@
 const ALBUMS = [
   {
     title: "עם כל הלב",
-    title_en: "WITH ALL OF MY HEART",
-    cover: "images/AT-CoverArt4000X4000.jpg?v=3",
+    title_en: "WITH MY WHOLE HEART",
+    cover: "images/AT-CoverArt4000X4000.jpg?v=4",
     link: "https://lnk.to/alontayar",
   },
   {

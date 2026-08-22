@@ -253,6 +253,10 @@ a {
 
 .home-listen-link {
   margin-top: 2px;
+  /* match music page button width (tile max 380px) */
+  width: min(var(--hero-art-width), 380px);
+  font-size: var(--headline-size);
+  font-weight: 400;
 }
 
 .listen-link:hover {

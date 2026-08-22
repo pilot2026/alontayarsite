@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
       listen: 'להאזנה'
     },
     en: {
-      brand: 'ALON TAYAR',
-      music: 'MUSIC',
-      albumTitle: 'WITH ALL OF MY HEART',
+      brand: 'Alon Tayar',
+      music: 'Music',
+      albumTitle: 'WITH MY WHOLE HEART',
       listen: 'LISTEN'
     }
   };
