@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'fr-at';
+  src: url('../FR-AT-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --bg: #f4e84d;
+  --bg: #ffffff;
   --fg: #000000;
   --hero-width: min(62vw, 390px);
   --hero-art-width: var(--hero-width);
@@ -20,7 +28,7 @@ body {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: 'Nitzotz', Arial, Helvetica, sans-serif;
+  font-family: 'fr-at', Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -78,6 +86,13 @@ a {
   height: auto;
   display: block;
   transform: translateY(-3px);
+}
+
+.topbar-brand .brand-text {
+  font-family: 'fr-at', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.6vw, 1.4rem);
+  display: inline-block;
 }
 
 .mainnav {
@@ -155,7 +170,7 @@ a {
 }
 
 .logo {
-  font-family: 'Nitzotz', Arial, Helvetica, sans-serif;
+  font-family: 'fr-at', Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: clamp(2rem, 6vw, 3.5rem);
   margin: 0 0 0.5rem;
@@ -163,13 +178,19 @@ a {
 }
 
 .album-title {
-  display: block;
-  width: min(100vw, 1700px);
-  max-width: 100%;
-  height: auto;
   margin: 0 0 0.05rem;
-  border: none;
   padding: 0;
+  font-family: 'fr-at', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  line-height: 1;
+}
+
+.album-subtitle {
+  font-family: 'fr-at', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 3.2vw, 1.25rem);
+  margin: 0 0 0.6rem;
 }
 
 .album-art {
@@ -180,9 +201,7 @@ a {
   margin-bottom: 0.1rem;
 }
 
-.album-title {
-  margin: 0;
-}
+/* consolidated album-title rules above */
 
 .listen-link {
   display: inline-flex;
@@ -269,7 +288,7 @@ a {
   font-size: 0.74rem;
   line-height: 1.45;
   letter-spacing: 0.01em;
-  font-family: 'Nitzotz', Arial, Helvetica, sans-serif;
+  font-family: 'fr-at', Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
