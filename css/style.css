@@ -91,8 +91,10 @@ a {
 .topbar-brand .brand-text {
   font-family: 'fr-at', Arial, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: clamp(1rem, 2.6vw, 1.4rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   display: inline-block;
+  width: var(--hero-art-width);
+  text-align: center;
 }
 
 .mainnav {
@@ -211,7 +213,7 @@ a {
   max-width: 100%;
   padding: 0.15rem 0.75rem 0.18rem;
   margin-top: 0.01rem;
-  font-size: 1rem;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   font-weight: bold;
   text-align: center;
   color: var(--fg);
