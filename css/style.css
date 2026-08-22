@@ -12,6 +12,7 @@
   --hero-width: min(62vw, 390px);
   --hero-art-width: var(--hero-width);
   --music-button-width: min(62vw, 390px);
+  --headline-size: clamp(1.75rem, 5vw, 3.5rem);
 }
 
 * {
@@ -90,8 +91,8 @@ a {
 
 .topbar-brand .brand-text {
   font-family: 'fr-at', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  font-weight: 400;
+  font-size: var(--headline-size);
   display: inline-block;
   width: var(--hero-art-width);
   text-align: center;
@@ -104,8 +105,8 @@ a {
 }
 
 .nav-link {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: var(--headline-size);
+  font-weight: 400;
   letter-spacing: 0.05em;
   border-bottom: 2px solid transparent;
 }
