@@ -23,7 +23,7 @@
     </div>
     <div class="topbar-center">
       <a class="topbar-brand" href="index.html" aria-label="אלון תייר">
-        <span class="brand-text">אלון תייר</span>
+        <span class="brand-text" data-i18n="brand">אלון תייר</span>
       </a>
     </div>
     <nav class="mainnav">
@@ -31,16 +31,18 @@
         <img src="images/musicoff.svg" alt="מוזיקה כבויה" class="radio-icon icon-idle" />
         <img src="images/musicon.svg" alt="מוזיקה דלוקה" class="radio-icon icon-playing" />
       </button>
-      <a href="music.html" class="nav-link">מוזיקה</a>
+      <a href="music.html" class="nav-link" data-i18n="music">מוזיקה</a>
+      <button id="lang-toggle" class="lang-toggle" aria-label="שפת אתר">EN</button>
     </nav>
   </header>
 
   <main class="music-page">
     <div id="albums-grid" class="albums-grid"></div>
-    <p class="footer-copy">© כל הזכויות שמורות לאלון תייר 2026</p>
+    <p class="footer-copy" data-i18n="copyright">© כל הזכויות שמורות לאלון תייר 2026</p>
   </main>
 
   <script src="js/albums.js"></script>
+  <script src="js/i18n.js"></script>
   <script>
     const grid = document.getElementById("albums-grid");
     const albumsToShow = (ALBUMS.length ? ALBUMS : [{ title: "עם כל הלב", cover: "images/AT-CoverArt4000X4000.jpg?v=3", link: "#" }]).slice(0, 4);

@@ -107,7 +107,7 @@ a {
 .nav-link {
   font-size: var(--headline-size);
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   border-bottom: 2px solid transparent;
 }
 
@@ -191,8 +191,8 @@ a {
 
 .album-subtitle {
   font-family: 'fr-at', Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: clamp(1rem, 3.2vw, 1.25rem);
+  font-weight: 400;
+  font-size: var(--headline-size);
   margin: 0 0 0.6rem;
 }
 
@@ -274,8 +274,8 @@ a {
 }
 
 .album-tile-title {
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: var(--headline-size);
   line-height: 1.05;
   margin-bottom: 0.1rem;
 }
@@ -284,6 +284,8 @@ a {
   width: 100%;
   max-width: 100%;
   margin-top: 0;
+  font-size: var(--headline-size);
+  font-weight: 400;
 }
 
 .footer-copy {
